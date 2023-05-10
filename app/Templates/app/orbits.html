@@ -5,6 +5,6 @@
 {% block content %}
 <h1>Orbits</h1>
 
-<img src="{% static '/images/orbits.png' %}" alt="Orbits">
+{{ graph|safe }}
 
 {% endblock content %}
