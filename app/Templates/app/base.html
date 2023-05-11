@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>{% block title %}Solarkit{% endblock title %}</title>
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}">
     </head>
     <body>
        {% block content %}{% endblock content %} 

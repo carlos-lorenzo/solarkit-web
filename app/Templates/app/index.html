@@ -1,6 +1,26 @@
 {% extends 'app/base.html' %}
-{% block title %}{% endblock title %}
+{% block title %}Solarkit{% endblock title %}
+
 {% block content %}
+<div class="centred">
+    <h1>Solarkit</h1>
+</div>
+
+<div class="gallery">
+    <div class="card" onclick="location.href='/orbits/';" style="cursor: pointer;">    
+        <h3>Orbits</h3>
+    </div>
+    <div class="card" onclick="location.href='/orbits/';" style="cursor: pointer;">    
+        <h3>Spinograph</h3>
+    </div>
+    <div class="card" onclick="location.href='/orbits/';" style="cursor: pointer;">    
+        <h3>Heliocentric</h3>
+    </div>
+    <div class="card" onclick="location.href='/orbits/';" style="cursor: pointer;">    
+        <h3>Third Law</h3>
+    </div>
+</div>
+
 
 
 {% endblock content %}

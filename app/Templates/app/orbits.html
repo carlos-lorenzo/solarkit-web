@@ -3,8 +3,20 @@
 
 {% block title %}Orbits{% endblock title %}
 {% block content %}
-<h1>Orbits</h1>
+<div class="centred">
+    <h1>Orbits</h1>
+</div>
 
-{{ graph|safe }}
+
+<form action="/orbits/" method="post">
+    {% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit">
+
+</form> 
+
+<div class="centred">
+    {{ graph|safe }}
+</div>
 
 {% endblock content %}
