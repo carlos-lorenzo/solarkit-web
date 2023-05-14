@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Third Law{% endblock title %}
+{% block content %}
+<div class="centred">
+    <h1>Third Law</h1>
+</div>
+
+
+
+<div class="centred">
+    {{ graph|safe }}
+</div>
+
+{% endblock content %}

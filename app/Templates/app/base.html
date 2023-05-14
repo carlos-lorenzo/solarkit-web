@@ -2,9 +2,29 @@
 <html>
     <head>
         <title>{% block title %}Solarkit{% endblock title %}</title>
+        
         <link rel="stylesheet" href="/static/css/style.css?{% now "U" %}">
+        <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
     </head>
+    
     <body>
-       {% block content %}{% endblock content %} 
+        <header>
+            <div class="header-container">
+                <div>
+                    <img src="/static/images/logo.png" onclick="location.href='/';" style="cursor: pointer;">
+                </div>
+                <div>
+                    <a href="/"><h1>Solarkit</h1></a>
+                </div>
+                <div>
+                    <a href="https://www.bpho.org.uk/bpho/computational-challenge"><h3>BPhO<h3></a>
+                </div>
+            </div>
+        </header>
+
+       {% block content %}
+       {% endblock content %} 
+
+       
     </body>
 </html>
