@@ -1,0 +1,16 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Angle vs Time{% endblock title %}
+{% block content %}
+<div class="centred">
+    <h1>Angle vs Time</h1>
+</div>
+
+
+
+<div class="centred">
+    {{ graph|safe }}
+</div>
+
+{% endblock content %}

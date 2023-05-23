@@ -104,3 +104,20 @@ def third_law(request):
     
     
     return render(request, "app/third_law.html", context)
+
+def angle_vs_time(request):
+    context = {}
+    system = utils.load_system_from_csv("app\data\planet_data.csv")
+    viewer = Viewer(system=system)
+
+    viewer.server_mode()
+    viewer.initialise_plotter(square_ratio=False)
+    viewer.angle_vs_time_comparison()
+    viewer.add_grid()
+    viewer.add_legend()
+    
+    context["graph"] = viewer.get_figure_data()
+    
+    
+    return render(request, "app/angle_vs_time.html", context)
+    

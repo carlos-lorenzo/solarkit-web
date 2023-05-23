@@ -8,4 +8,5 @@ urlpatterns = [
     path("spinograph/", views.spinograph),
     path("heliocentric/", views.heliocentric),
     path("third-law/", views.third_law),
+    path("angle-vs-time/", views.angle_vs_time),
 ]

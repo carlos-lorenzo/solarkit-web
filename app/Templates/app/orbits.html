@@ -11,51 +11,51 @@
     <div class="form-container">
         <div class="checkbox-holder">
             <input type="checkbox" name="mercury" class="checkbox-input" id="id_mercury">
-            <label for="id_mercury" class="checkbox"><b>Mercury</b></label>
+            <label for="id_mercury" class="checkbox">Mercury</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="venus" class="checkbox-input" id="id_venus">
-            <label for="id_venus" class="checkbox"><b>Venus</b></label>
+            <label for="id_venus" class="checkbox">Venus</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="earth" class="checkbox-input" id="id_earth">
-            <label for="id_earth" class="checkbox"><b>Earth</b></label>
+            <label for="id_earth" class="checkbox">Earth</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="mars" class="checkbox-input" id="id_mars">
-            <label for="id_mars" class="checkbox"><b>Mars</b></label>
+            <label for="id_mars" class="checkbox">Mars</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="jupiter" class="checkbox-input" id="id_jupiter">
-            <label for="id_jupiter" class="checkbox"><b>Jupiter</b></label>
+            <label for="id_jupiter" class="checkbox">Jupiter</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="saturn" class="checkbox-input" id="id_saturn">
-            <label for="id_saturn" class="checkbox"><b>Saturn</b></label>
+            <label for="id_saturn" class="checkbox">Saturn</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="uranus" class="checkbox-input" id="id_uranus">
-            <label for="id_uranus" class="checkbox"><b>Uranus</b></label>
+            <label for="id_uranus" class="checkbox">Uranus</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="neptune" class="checkbox-input" id="id_neptune">
-            <label for="id_neptune" class="checkbox"><b>Neptune</b></label>
+            <label for="id_neptune" class="checkbox">Neptune</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="pluto" class="checkbox-input" id="id_pluto">
-            <label for="id_pluto" class="checkbox"><b>Pluto</b></label>
+            <label for="id_pluto" class="checkbox">Pluto</label>
         </div>
         <div class="checkbox-holder">
             <input type="checkbox" name="compute_3D" class="checkbox-input" id="id_compute_3D">
-            <label for="id_compute_3D" class="checkbox"><b>3D</b></label>
+            <label for="id_compute_3D" class="checkbox">3D</label>
         </div>
 
-        <input type="submit" class="submit">
+        <input type="submit" class="submit" value="Compute" style="font-family: 'Orbitron', sans-serif;">
     </div>
 </form>
 
-<div class="centred">
-    {{ graph|safe }}
+<div class="centred graph">
+    {{ graph|safe }}  
 </div>
 
 {% endblock content %}
