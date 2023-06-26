@@ -6,10 +6,9 @@ from solarkit import utils
 
 
 def create_viewer_from_querydict(query_dict: dict) -> Viewer:
-    """_summary_
+    """
     Creates a solarkit.Viewer object from request
 
-    
     Args:
         query_dict (dict): query dictionary
 
@@ -30,6 +29,7 @@ def create_viewer_from_querydict(query_dict: dict) -> Viewer:
     return Viewer(system=system, planets_to_use=planets_to_use, compute_3D=compute_3D)
 
 
+
 # Create your views here.
 def index(request):
     
@@ -43,7 +43,7 @@ def orbits(request):
         viewer = create_viewer_from_querydict(query_dict=request.GET)
     
         viewer.server_mode()
-        viewer.initialise_plotter()
+        viewer.initialise_plotter(size=7)
         viewer.system_orbits()
         viewer.add_grid()
         viewer.add_legend()
@@ -62,7 +62,7 @@ def spinograph(request):
         viewer = create_viewer_from_querydict(query_dict=request.GET)
     
         viewer.server_mode()
-        viewer.initialise_plotter()
+        viewer.initialise_plotter(dpi=1500, size=10)
         viewer.spinograph()
         viewer.add_grid()
         viewer.add_legend()
@@ -79,7 +79,7 @@ def heliocentric(request):
         viewer = create_viewer_from_querydict(query_dict=request.GET)
     
         viewer.server_mode()
-        viewer.initialise_plotter()
+        viewer.initialise_plotter(size=7)
         viewer.heliocentric_model(origin_planet_name="Earth")
         viewer.add_grid()
         viewer.add_legend()
